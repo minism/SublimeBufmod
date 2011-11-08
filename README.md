@@ -1,7 +1,7 @@
 Description
 ===========
 
-This package contains various commands to manipulate the current text selection in useful ways.
+Bufmod is a package for SublimeText2 that contains various commands to manipulate the current text selection in useful ways.
 
 Installation
 ============
