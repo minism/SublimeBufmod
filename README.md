@@ -69,4 +69,6 @@ Becomes:
 Discussion
 ==========
 
+Forum thread: http://www.sublimetext.com/forum/viewtopic.php?f=5&t=3677
+
 
