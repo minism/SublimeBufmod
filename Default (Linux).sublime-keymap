@@ -1,4 +1,4 @@
 [
-    { "keys": [""], "command": "bufmod_function" },
+    { "keys": [""], "command": "bufmod_apply_function" },
     { "keys": [""], "command": "bufmod_decorate"}
 ]

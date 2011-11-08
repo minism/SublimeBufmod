@@ -1,7 +1,7 @@
 [
     {
         "caption": "Bufmod: Apply function to selection",
-        "command": "bufmod_function"
+        "command": "bufmod_apply_function"
     },
 
     {
