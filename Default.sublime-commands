@@ -1,0 +1,11 @@
+[
+    {
+        "caption": "Bufmod: Apply function to selection",
+        "command": "bufmod_function"
+    },
+
+    {
+        "caption": "Bufmod: Decorate text with border",
+        "command": "bufmod_decorate"
+    }
+]
