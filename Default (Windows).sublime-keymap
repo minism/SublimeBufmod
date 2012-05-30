@@ -1,4 +1,5 @@
 [
     { "keys": [""], "command": "bufmod_apply_function" },
+    { "keys": [""], "command": "bufmod_apply_function_lines" },
     { "keys": [""], "command": "bufmod_decorate"}
 ]

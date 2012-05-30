@@ -49,6 +49,17 @@ Into:
     /Users/josh/scripts
     /Users/josh/notes
 
+Apply function to each line in selection
+----------------------------------------
+
+Similar to the previous command, except for the following differences:
+
+* The function is mapped to every line in the selection.
+* The variable `s` is a unicode object containing the text for a single line.
+* The value returned replaces a single line.
+
+This (ideally) obviates the need to use split and join in your function to process multiple lines.
+
 Decorate text with border
 -------------------------
 

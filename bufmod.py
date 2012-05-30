@@ -4,9 +4,19 @@ import sublime
 class Bufmod_apply_function(sublime_plugin.TextCommand):
     def run(self, edit):
         self.view.window().show_input_panel(
-            "Function to modify selection:",
+            "Apply function to selection:",
             "return s",
             _bufmod_apply_function,
+            None,
+            None
+        )
+
+class Bufmod_apply_function_lines(sublime_plugin.TextCommand):
+    def run(self, edit):
+        self.view.window().show_input_panel(
+            "Apply function to each line:",
+            "return s",
+            _bufmod_apply_function_lines,
             None,
             None
         )
@@ -44,5 +54,16 @@ def _bufmod_apply_function(func):
     exec('def f(s): %s;' % func)
     for region in view.sel():
         newtext = f(view.substr(region))
+        view.replace(edit, region, newtext)
+    view.end_edit(edit)
+
+def _bufmod_apply_function_lines(func):
+    view = sublime.active_window().active_view()
+    edit = view.begin_edit()
+    namespace = {}
+    exec 'def f(s): %s;' % func in namespace
+    f = namespace.get('f', lambda x: x)
+    for region in view.sel():
+        newtext = '\n'.join(map(lambda line: namespace['f'](line), view.substr(region).splitlines()))
         view.replace(edit, region, newtext)
     view.end_edit(edit)

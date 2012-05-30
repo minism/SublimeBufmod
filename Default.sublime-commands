@@ -5,6 +5,11 @@
     },
 
     {
+        "caption": "Bufmod: Apply function to lines in selection",
+        "command": "bufmod_apply_function_lines"
+    },
+
+    {
         "caption": "Bufmod: Decorate text with border",
         "command": "bufmod_decorate"
     }
